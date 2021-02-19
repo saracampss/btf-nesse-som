@@ -24,7 +24,7 @@ class PubliController < ApplicationController
 
 	def update 
 		publi = Publi.find(params[:id])
-		if Publi.update(podcast_params)
+		if publi.update(publi_params)
 			render json: publi, status: 200
 		else 
 			render json: publi.errors, status: 500

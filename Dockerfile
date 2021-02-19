@@ -9,7 +9,7 @@ RUN bundle install
 COPY . /myapp
 
 # Add a script to be executed every time the container starts.
-EXPOSE 3000
+EXPOSE 3333
 
 # Start the main process.
-CMD ["bundle", "exec", "rails", "server"]
+CMD ["bundle", "exec", "rails", "s", "-p", "3333", "-b", "0.0.0.0" ]
