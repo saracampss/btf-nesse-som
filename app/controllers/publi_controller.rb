@@ -34,7 +34,7 @@ class PubliController < ApplicationController
 	private 
 
 		def publi_params
-			params.permit(:tittle, :thumb, :author, :content, :img_ctt, :tag, :id)
+			params.permit(:tittle, :thumb, :author, :content, :img_ctt, :id, :tag => [])
 		end
 
 end
